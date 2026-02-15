@@ -1,0 +1,28 @@
+Tester la prédiction de rentabilité :
+
+{
+  "Item": "Maize",
+  "Area": "France",
+  "Year": 2026,
+  "average_rain_fall_mm_per_year": 1500,
+  "avg_temp": 22,
+  "Pesticide_use_total_tonnes": 195,
+  "Fertilizer_Used": 0.55,
+  "Irrigation_Used": 0.45,
+  "Days_to_Harvest": 110
+}
+
+
+
+Tester la prédiction des cultures : 
+
+{
+  "Area": "Cameroon",
+  "Year": 2026,
+  "average_rain_fall_mm_per_year": 1605,
+  "avg_temp": 28,
+  "Pesticide_use_total_tonnes": 165,
+  "Fertilizer_Used": 0.45,
+  "Irrigation_Used": 0.65,
+  "Days_to_Harvest": 95
+}

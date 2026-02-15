@@ -1,0 +1,27 @@
+[project]
+name = "systeme-de-recommandations-pour-agriculture"
+version = "0.1.0"
+description = "Développer une application web simple pour aider les clients agriculteurs de la société Agritech Answers à prendre les meilleurs décisions: d'une part, en renseignant les informations de sa culture et parcelle l'application doit être en mesure de donner une estimation du rendement attendu, d'autre part, en renseignant uniquement les conditions de sa parcelle, l'application doit pouvoir lui recommander la culture la plus rentable et simuler un rendement pour toutes les cultures possibles par classement."
+authors = [
+    {name = "Symphor F",email = "symphorf@yahoo.fr"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "ipykernel (>=7.1.0,<8.0.0)",
+    "xgboost (>=3.1.3,<4.0.0)"
+]
+
+[tool.poetry]
+package-mode = false 
+[tool.poetry.group.dev.dependencies]
+pandas = "^2.3.3"
+numpy = "^2.4.1"
+seaborn = "^0.13.2"
+matplotlib = "^3.10.8"
+mlflow = "^3.8.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

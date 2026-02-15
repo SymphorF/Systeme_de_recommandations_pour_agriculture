@@ -1,0 +1,10 @@
+# Models
+*.pkl
+
+# Data
+data/*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
