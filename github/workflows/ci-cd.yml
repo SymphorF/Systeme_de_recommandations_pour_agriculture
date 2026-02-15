@@ -27,9 +27,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r api/requirements.txt
-          pip install pytest  # <-- Ajouté pour garantir que pytest est installé
+          pip install pytest httpx  # nécessaire pour FastAPI TestClient
 
       - name: Run tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}  # ajoute la racine du repo au PYTHONPATH
         run: |
           pytest api/tests -q
 
