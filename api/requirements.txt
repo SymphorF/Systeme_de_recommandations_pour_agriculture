@@ -6,4 +6,5 @@ xgboost
 joblib
 streamlit
 requests
-pandas
+panda
+pytest
