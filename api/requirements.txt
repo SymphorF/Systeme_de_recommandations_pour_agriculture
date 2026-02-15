@@ -8,3 +8,5 @@ streamlit
 requests
 panda
 pytest
+httpx
+requests
