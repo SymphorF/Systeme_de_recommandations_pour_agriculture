@@ -30,7 +30,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest api/tests -q
+          PYTHONPATH=. python -m pytest api/tests -q
 
 
   # -------------------------
