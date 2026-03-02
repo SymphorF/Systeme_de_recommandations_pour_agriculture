@@ -5,7 +5,7 @@ import pandas as pd
 
 # Charger le modèle
 #model = joblib.load("model_xgb.pkl")
-model_2 = joblib.load("model_rf_tt.pkl")
+model_2 = joblib.load("../model/model_rf_tt.pkl")
 
 app = FastAPI(
     title="Crop Yield Prediction API",
