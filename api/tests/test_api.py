@@ -1,7 +1,29 @@
 from fastapi.testclient import TestClient
-from main import app
+from unittest.mock import MagicMock
+import pytest
+
+from main import app, model_2
 
 client = TestClient(app)
+
+
+# ===============================
+# MOCK DU MODELE POUR LES TESTS
+# ===============================
+
+@pytest.fixture(autouse=True)
+def mock_model():
+    global model_2
+
+    fake_model = MagicMock()
+    fake_model.predict.return_value = [100]
+
+    model_2 = fake_model
+
+
+# ===============================
+# TEST PREDICT
+# ===============================
 
 def test_predict_endpoint():
     payload = {
@@ -20,9 +42,14 @@ def test_predict_endpoint():
 
     assert response.status_code == 200
     data = response.json()
+
     assert "predicted_yield_hg_per_ha" in data
     assert isinstance(data["predicted_yield_hg_per_ha"], (int, float))
 
+
+# ===============================
+# TEST RECOMMEND
+# ===============================
 
 def test_recommend_endpoint():
     payload = {
@@ -40,6 +67,7 @@ def test_recommend_endpoint():
 
     assert response.status_code == 200
     data = response.json()
+
     assert isinstance(data, list)
     assert len(data) > 0
     assert "crop" in data[0]
