@@ -33,7 +33,7 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}  # ajoute la racine du repo au PYTHONPATH
         run: |
-          pytest api/tests -q
+          python -m pytest api/tests -q
 
   # -------------------------
   # 2) BUILD DOCKER IMAGE
