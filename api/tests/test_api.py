@@ -1,29 +1,22 @@
 from fastapi.testclient import TestClient
-from unittest.mock import MagicMock
+from unittest.mock import patch, MagicMock
 import pytest
 
-from main import app, model_2
+# On importe après patch potentiel
+with patch("joblib.load") as mock_load:
+    fake_model = MagicMock()
+    fake_model.predict.return_value = [100]
+
+    mock_load.return_value = fake_model
+
+    from main import app
 
 client = TestClient(app)
 
 
-# ===============================
-# MOCK DU MODELE POUR LES TESTS
-# ===============================
-
-@pytest.fixture(autouse=True)
-def mock_model():
-    global model_2
-
-    fake_model = MagicMock()
-    fake_model.predict.return_value = [100]
-
-    model_2 = fake_model
-
-
-# ===============================
+# ============================
 # TEST PREDICT
-# ===============================
+# ============================
 
 def test_predict_endpoint():
     payload = {
@@ -47,9 +40,9 @@ def test_predict_endpoint():
     assert isinstance(data["predicted_yield_hg_per_ha"], (int, float))
 
 
-# ===============================
+# ============================
 # TEST RECOMMEND
-# ===============================
+# ============================
 
 def test_recommend_endpoint():
     payload = {
