@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY main.py .
-COPY model_rf_tt.pkl .
+COPY model ./model
 
 EXPOSE 8000
 

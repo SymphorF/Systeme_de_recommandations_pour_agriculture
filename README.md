@@ -23,7 +23,7 @@ Build
 docker build -t crop-api .
 
 Run
-docker run -p 8002:8000 crop-api
+docker run -p 8003:8000 crop-api
 
 Documentation auto FastAPI
 
@@ -46,3 +46,24 @@ streamlit run app.py
 
 - lancer d'abord fastapi : fastapi dev main.py
 - ensuite lancer l'app : streamlit run app.py
+
+
+
+
+
+Structure recommandée
+
+.
+├── api/
+│   ├── main.py
+│   ├── model_rf.pkl
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── tests/
+│       └── test_api.py
+├── streamlit/
+│   ├── app.py
+│   └── requirements.txt
+└── .github/
+    └── workflows/
+        └── ci-cd.yml
