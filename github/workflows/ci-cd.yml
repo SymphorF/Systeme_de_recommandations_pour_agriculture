@@ -52,7 +52,7 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t crop-api:latest ./api
+          docker build -t crop-api:latest .
 
   # -------------------------
   # 3) PUSH DOCKER HUB (optionnel)
@@ -76,6 +76,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./api
+          context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/crop-api:latest
