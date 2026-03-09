@@ -123,9 +123,9 @@ MODEL_PATH = os.path.join(BASE_DIR, "model", "model_rf_tt.pkl")
 
 try:
     model_2 = joblib.load(MODEL_PATH)
-    print("✅ Model loaded successfully")
+    print("Model loaded successfully")
 except FileNotFoundError:
-    print("⚠️ Model file not found. Running in CI or model missing.")
+    print("Model file not found. Running in CI or model missing.")
     model_2 = None
 
 

@@ -2,7 +2,7 @@
 
 Structure 
 
-.
+```
 Systeme_de_recommandations_pour_agriculture
 │
 ├── .git/
@@ -29,7 +29,8 @@ Systeme_de_recommandations_pour_agriculture
 ├── mlflow.PNG                # capture interface MLflow
 ├── .gitignore
 └── .gitattributes
-.
+```
+
 
 1. Créer un environnement virtuel :
 
@@ -74,8 +75,8 @@ streamlit run app.py
 
 ## Pour lancer l'ensemble et voir comment l'app fonctionne 
 
-- lancer d'abord fastapi : fastapi dev main.py
-- ensuite lancer l'app : streamlit run app.py
+- ouvrir un terminal lancer d'abord fastapi : fastapi dev main.py
+- ensuite ouvrir un second terminal et lancer l'app : streamlit run app.py
 
 
 5. Lancer MLflow en local :
