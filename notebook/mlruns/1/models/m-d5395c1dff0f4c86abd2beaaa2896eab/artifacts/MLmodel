@@ -1,0 +1,23 @@
+artifact_path: file:///c:/Users/PC/OneDrive/Documents/OPENCLASSROOMS - FORMATION/00
+  - Data Scientist Machine Learning/Projet 12/Exercice/Systeme_de_recommandations_pour_agriculture/notebook/mlruns/1/models/m-d5395c1dff0f4c86abd2beaaa2896eab/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+mlflow_version: 3.8.1
+model_id: m-d5395c1dff0f4c86abd2beaaa2896eab
+model_size_bytes: 197099135
+model_uuid: m-d5395c1dff0f4c86abd2beaaa2896eab
+prompts: null
+run_id: f1da2bbaf00a4c1cbc89bebd48c17907
+utc_time_created: '2026-03-08 13:39:21.246105'

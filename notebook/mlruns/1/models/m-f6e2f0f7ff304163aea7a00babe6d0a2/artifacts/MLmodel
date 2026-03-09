@@ -1,0 +1,35 @@
+artifact_path: file:///c:/Users/PC/OneDrive/Documents/OPENCLASSROOMS - FORMATION/00
+  - Data Scientist Machine Learning/Projet 12/Exercice/Systeme_de_recommandations_pour_agriculture/notebook/mlruns/1/models/m-f6e2f0f7ff304163aea7a00babe6d0a2/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+is_signature_from_type_hint: false
+mlflow_version: 3.8.1
+model_id: m-f6e2f0f7ff304163aea7a00babe6d0a2
+model_size_bytes: 3525147
+model_uuid: m-f6e2f0f7ff304163aea7a00babe6d0a2
+prompts: null
+run_id: 94a8c6e6c92d4d529954db227387bd62
+signature:
+  inputs: '[{"type": "string", "name": "Area", "required": true}, {"type": "string",
+    "name": "Item", "required": true}, {"type": "long", "name": "Year", "required":
+    true}, {"type": "double", "name": "average_rain_fall_mm_per_year", "required":
+    true}, {"type": "double", "name": "avg_temp", "required": true}, {"type": "double",
+    "name": "Pesticide_use_total_tonnes", "required": true}, {"type": "double", "name":
+    "Fertilizer_Used", "required": true}, {"type": "double", "name": "Irrigation_Used",
+    "required": true}, {"type": "double", "name": "Days_to_Harvest", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-03-08 13:50:35.036670'

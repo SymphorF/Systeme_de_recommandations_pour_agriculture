@@ -1,7 +1,37 @@
 # Système de recommandations pour l’agriculture
 
+Structure 
 
-3. Créer un environnement virtuel :
+.
+Systeme_de_recommandations_pour_agriculture
+│
+├── .git/
+├── .github/                  # CI/CD Github Actions
+├── api/                      # API (FastAPI ou Flask)
+│   └── tests
+├── data/                     # datasets
+│   ├── raw/
+│   └── processed/
+├── model/                    # model retenu
+│   └── model_rf_tt.pkl
+├── notebook/                 # notebooks d'analyse
+│   ├── notebook.ipynb
+│   └── mlflow.db
+├── streamlit_app/            # interface utilisateur
+│   └── app.py
+├── github/                   # scripts liés au repo ou CI
+├── main.py                   # script principal ML / pipeline
+├── dockerfile                # container Docker
+├── requirements.txt
+├── pyproject.toml
+├── poetry.lock
+├── README.md
+├── mlflow.PNG                # capture interface MLflow
+├── .gitignore
+└── .gitattributes
+.
+
+1. Créer un environnement virtuel :
 
 bash
 
@@ -18,7 +48,7 @@ Sélectioner le bon Kernel ("Poetry - Système Reco Agriculture")
 L'environnement poetry est prêt à être utilisé
 
 
-▶️ 4️⃣ Lancer l’API sur Docker
+2. Lancer l’API sur Docker
 Build
 docker build -t crop-api .
 
@@ -29,7 +59,7 @@ Documentation auto FastAPI
 
 👉 http://localhost:8002/docs
 
-**Lancer l'api en local**
+3. Lancer l'api en local
 
 se déplacer à la source
 
@@ -37,7 +67,7 @@ se déplacer à la source
  ou
  uvicorn main:app --reload
 
-**Lancer streamlit**
+4. Lancer streamlit
 
 streamlit run app.py
 
@@ -48,22 +78,18 @@ streamlit run app.py
 - ensuite lancer l'app : streamlit run app.py
 
 
+5. Lancer MLflow en local :
+
+bash
+ 
+ notebook 
+ 
+ mlflow ui
+
+Ensuite lancer 
+
+http://127.0.0.1:5000
 
 
 
-Structure recommandée
 
-.
-├── api/
-│   ├── main.py
-│   ├── model_rf.pkl
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   └── tests/
-│       └── test_api.py
-├── streamlit/
-│   ├── app.py
-│   └── requirements.txt
-└── .github/
-    └── workflows/
-        └── ci-cd.yml

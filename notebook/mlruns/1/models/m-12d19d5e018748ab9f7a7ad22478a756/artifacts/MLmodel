@@ -1,0 +1,22 @@
+artifact_path: file:///c:/Users/PC/OneDrive/Documents/OPENCLASSROOMS - FORMATION/00
+  - Data Scientist Machine Learning/Projet 12/Exercice/Systeme_de_recommandations_pour_agriculture/notebook/mlruns/1/models/m-12d19d5e018748ab9f7a7ad22478a756/artifacts
+flavors:
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+is_signature_from_type_hint: false
+mlflow_version: 3.8.1
+model_id: m-12d19d5e018748ab9f7a7ad22478a756
+model_size_bytes: 7403
+model_uuid: m-12d19d5e018748ab9f7a7ad22478a756
+prompts: null
+run_id: 76af23703f90496d8e601205590dcf2b
+signature:
+  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 27]}}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1,
+    27]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-03-08 13:24:50.963674'

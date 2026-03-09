@@ -1,5 +1,6 @@
 # Models
 *.pkl
+!model/model_rf_tt.pkl
 
 # Data
 data/*.csv
