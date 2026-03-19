@@ -20,7 +20,7 @@ pandas = "^2.3.3"
 numpy = "^2.4.1"
 seaborn = "^0.13.2"
 matplotlib = "^3.10.8"
-mlflow = "^3.8.1"
+mlflow = "^3.9.0rc0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
